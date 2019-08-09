@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name = "Suite1">
+    <test name = "test number 1">
+        <parameter name = "email"  value = "koz84075+007@gmail.com"/>
+        <parameter name = "password"  value = "1234567a"/>
+        <parameter name = "email3"  value = "Koz84075+007@gmail.com"/>
+        <parameter name = "password4"  value = "1234567A"/>
+        <parameter name = "password5"  value = "123a"/>
+        <parameter name = "email6"  value = "xxxxx"/>
+        <parameter name = "password6"  value = "1234567a"/>
+        <parameter name = "email7"  value = ""/>
+        <parameter name = "password7"  value = "1234567a"/>
+        <parameter name = "email8"  value = "koz84075+007@gmail.com"/>
+        <parameter name = "password8"  value = ""/>
+        <classes>
+            <class name = "parametersTestsExamples.LoginParameters"/>
+        </classes>
+    </test>
+</suite>

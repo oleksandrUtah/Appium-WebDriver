@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="My suite">
+    <test name="My ioappium">
+
+        <parameter name="id1"  value="com.android.calculator2:id/digit_2"/>
+        <parameter name="id2"  value="com.android.calculator2:id/digit_4"/>
+
+        <classes>
+            <class name="appiumSampleTests.FirstAppiumClass"/>
+        </classes>
+    </test>
+</suite>
