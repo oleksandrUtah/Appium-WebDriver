@@ -7,6 +7,8 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
@@ -18,9 +20,10 @@ import java.util.concurrent.TimeUnit;
 import static io.appium.java_client.touch.TapOptions.tapOptions;
 import static io.appium.java_client.touch.WaitOptions.waitOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
+import static io.appium.java_client.touch.offset.PointOption.point;
 
 public class BaseLomotif {
-    private AppiumDriver driver;
+    public AppiumDriver driver;
     @BeforeTest
     public void setup () throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -41,9 +44,10 @@ public class BaseLomotif {
 
     public void testPattern(String mail, String password, AndroidElement notif_count, AndroidElement allow_button,
                             AndroidElement button1, AndroidElement action_signup, AndroidElement action_login,
-                            AndroidElement field_mail, AndroidElement field_password, AndroidElement show_password, AndroidElement login,
-                            AndroidElement screen_title) throws InterruptedException{
-        //System.out.println("Mail: " + mail + " + Password: " + password);
+                            AndroidElement field_mail, AndroidElement field_password, AndroidElement show_password,
+                            AndroidElement login, AndroidElement screen_title, int x1, int y1, int x2, int y2,
+                            AndroidElement logOut, AndroidElement button1LogOut, AndroidElement buttonOK, AndroidElement homePage) throws InterruptedException{
+        System.out.println("Mail: " + mail + " + Password: " + password);
         tapByElement(notif_count);
         tapByElement(allow_button);
         driver.navigate().back();
@@ -62,17 +66,42 @@ public class BaseLomotif {
 
         assert screen_title.getText().equals("Notifications"):"Actual text is : "
                 + screen_title.getText() + " did not match with expected text: Notifications";
-
-
-
-
+        tapByCoordinates (x1, y1);
+        tapByCoordinates (x2, y2);
+        tapByElement(logOut);
+        tapByElement(button1LogOut);
+        tapByElement(buttonOK);
+        assert homePage.getText().equals("Featured"):"Actual text is : "
+                + homePage.getText() + " did not match with expected text: Featured";
+    }
+    public void testPattern2 (String password, AndroidElement notif_count, AndroidElement allow_button,
+                              AndroidElement button1, AndroidElement action_signup, AndroidElement action_login,
+                              AndroidElement field_password, AndroidElement show_password) {
+        tapByElement(notif_count);
+        tapByElement(allow_button);
+        driver.navigate().back();
+        tapByElement(button1);
+        tapByElement(action_signup);
+        tapByElement(action_login);
+        sendKeysInput(field_password, password);
+        tapByElement(field_password);
+        System.out.println(field_password.getText());
+        assert field_password.getText().isEmpty():"Actual password input text is : "
+                + field_password.getText() + " did not masked";
+        tapByElement(show_password);
+        assert field_password.getText().equals(password):"Show password icon did not working";
     }
     public void tapByElement (AndroidElement androidElement) {
-        /*WebDriverWait wait = new WebDriverWait(driver, 10);
-        wait.until(ExpectedConditions.visibilityOf(androidElement));*/
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(androidElement));
         new TouchAction(driver)
                 .tap(tapOptions().withElement(element(androidElement)))
                 .waitAction(waitOptions(Duration.ofMillis(250))).perform();
+    }
+    public void tapByCoordinates (int x,  int y) {
+        new TouchAction(driver)
+                .tap(point(x,y))
+                .waitAction(waitOptions(Duration.ofMillis(1000))).perform();
     }
     public void sendKeysInput (AndroidElement androidElement, String string){
         tapByElement(androidElement);

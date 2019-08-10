@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Appium-WebDriver" target="1.5" />
+      <module name="Appium-WebDriver" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

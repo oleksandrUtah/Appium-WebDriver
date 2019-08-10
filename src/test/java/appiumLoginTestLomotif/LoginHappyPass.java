@@ -7,8 +7,12 @@ import org.testng.annotations.Test;
 
 public class LoginHappyPass extends BaseLomotif {
 
-    private String mail = "koz84075@gmail.com";
-    private String password = "3954korsa";
+    private String mail;
+    private String password;
+    private int x1;
+    private int y1;
+    private int x2;
+    private int y2;
 
     @AndroidFindBy(id = "com.lomotif.android:id/badge_notif_count")
     private AndroidElement notif_count;
@@ -29,19 +33,33 @@ public class LoginHappyPass extends BaseLomotif {
     private AndroidElement show_password;
     @AndroidFindBy(xpath = "//android.widget.Button[@text = 'Log in']")
     private AndroidElement login;
-
     @AndroidFindBy(id = "com.lomotif.android:id/label_screen_title")
     private AndroidElement screen_title;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text = 'Log Out']")
+    private AndroidElement logOut;
+    @AndroidFindBy(id = "android:id/button1")
+    private AndroidElement button1LogOut;
+    @AndroidFindBy(xpath = "//android.widget.Button[@text = 'OK']")
+    private AndroidElement buttonOK;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text = 'Featured']")
+    private AndroidElement homePage;
 
+    @Parameters({ "mail", "password", "x1", "y1", "x2", "y2"})
+    @Test (priority = 1)
 
-
-    @Parameters({ "mail", "password" })
-    @Test
-
-    public void loginHP(String mail, String password) throws InterruptedException{
+    public void loginHP(String mail, String password, int x1, int y1, int x2, int y2) throws InterruptedException{
 
         testPattern(mail, password, notif_count, allow_button, button1, action_signup, action_login,
-                field_mail, field_password, show_password, login, screen_title);
+                field_mail, field_password, show_password, login, screen_title, x1, y1, x2, y2, logOut, button1LogOut,
+                buttonOK, homePage);
     }
+
+
+    /*@Test (priority = 2)
+    @Parameters({ "mail", "password", "x1", "y1", "x2", "y2"})
+    public void inputTypePassword() throws InterruptedException{
+        testPattern2(password, notif_count, allow_button, button1, action_signup, action_login, field_password,
+                show_password);
+    }*/
 
 }

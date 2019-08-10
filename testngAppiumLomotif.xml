@@ -4,8 +4,12 @@
     <test name="ioappium">
         <parameter name="mail"  value="koz84075@gmail.com"/>
         <parameter name="password"  value="3954korsa"/>
+        <parameter name="x1"  value= "720"/>
+        <parameter name="y1"  value="1180"/>
+        <parameter name="x2"  value= "768"/>
+        <parameter name="y2"  value="68"/>
         <classes>
-            <class name="loginTestLomotif.LoginHappyPass"/>
+            <class name="appiumLoginTestLomotif.LoginHappyPass"/>
         </classes>
     </test>
 </suite>

@@ -62,7 +62,7 @@ public class HappyPath { // Example of Linear Scripting framework
         Actions a = new Actions(driver);
         a.moveToElement(resultsElement).build().perform();
         WebDriverWait wait3 = new WebDriverWait(driver, 30);
-        wait3.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.linkText("Sign out"))));
+        wait3.until(ExpectedConditions.visibilityOf(driver.findElement(By.linkText("Sign out"))));
         driver.findElement(By.linkText("Sign out")).click();
 
         WebDriverWait wait2 = new WebDriverWait(driver, 30);
