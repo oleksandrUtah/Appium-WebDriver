@@ -53,13 +53,23 @@ public class LoginHappyPass extends BaseLomotif {
                 field_mail, field_password, show_password, login, screen_title, x1, y1, x2, y2, logOut, button1LogOut,
                 buttonOK, homePage);
     }
-
-
-    /*@Test (priority = 2)
     @Parameters({ "mail", "password", "x1", "y1", "x2", "y2"})
-    public void inputTypePassword() throws InterruptedException{
+    @Test (priority = 2)
+
+    public void loginHP2(String mail, String password, int x1, int y1, int x2, int y2) throws InterruptedException{
+
+        testPattern(mail, password, notif_count, allow_button, button1, action_signup, action_login,
+                field_mail, field_password, show_password, login, screen_title, x1, y1, x2, y2, logOut, button1LogOut,
+                buttonOK, homePage);
+    }
+
+
+
+    @Parameters({ "password"})
+    @Test (priority = 3)
+    public void inputTypePassword(String password) throws InterruptedException{
         testPattern2(password, notif_count, allow_button, button1, action_signup, action_login, field_password,
                 show_password);
-    }*/
+    }
 
 }
