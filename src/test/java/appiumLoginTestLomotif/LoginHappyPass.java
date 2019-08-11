@@ -43,6 +43,9 @@ public class LoginHappyPass extends BaseLomotif {
     private AndroidElement buttonOK;
     @AndroidFindBy(xpath = "//android.widget.TextView[@text = 'Featured']")
     private AndroidElement homePage;
+    @AndroidFindBy(id = "android:id/message")
+    private AndroidElement loginFailed;
+
 
 
     @Test (priority = 1)
@@ -52,7 +55,7 @@ public class LoginHappyPass extends BaseLomotif {
                 field_mail, field_password, show_password, login, screen_title, x1, y1, x2, y2, logOut, button1LogOut,
                 buttonOK, homePage);
     }
-    /*@Test (priority = 2)
+    @Test (priority = 2)
     @Parameters({ "password"})
     public void inputTypePassword(String password) throws InterruptedException{
         testPattern2(password, notif_count, allow_button, button1, action_signup, action_login, field_password,
@@ -63,6 +66,41 @@ public class LoginHappyPass extends BaseLomotif {
     public void login3(String mail3, String password, int x1, int y1, int x2, int y2) throws InterruptedException{
         mail = mail3;
         testPattern3(mail, password, notif_count, action_signup, action_login, field_mail, field_password, show_password,
-                login, screen_title, x1, y1, x2, y2, logOut, button1LogOut, buttonOK, homePage);
-    }*/
+                login, screen_title, x1, y1, x2, y2, logOut, button1LogOut, buttonOK, homePage, loginFailed);
+    }
+    @Test (priority = 4)
+    @Parameters({ "mail", "password4", "x1", "y1", "x2", "y2"})
+    public void login4(String mail, String password4, int x1, int y1, int x2, int y2) throws InterruptedException{
+        password = password4;
+        testPattern3(mail, password, notif_count, action_signup, action_login, field_mail, field_password, show_password,
+                login, screen_title, x1, y1, x2, y2, logOut, button1LogOut, buttonOK, homePage, loginFailed);
+    }
+    @Test (priority = 5)
+    @Parameters({ "mail", "password5", "x1", "y1", "x2", "y2"})
+    public void login5(String mail, String password5, int x1, int y1, int x2, int y2) throws InterruptedException{
+        password = password5;
+        testPattern3(mail, password, notif_count, action_signup, action_login, field_mail, field_password, show_password,
+                login, screen_title, x1, y1, x2, y2, logOut, button1LogOut, buttonOK, homePage, loginFailed);
+    }
+    @Test (priority = 6)
+    @Parameters({ "mail6", "password", "x1", "y1", "x2", "y2"})
+    public void login6(String mail6, String password, int x1, int y1, int x2, int y2) throws InterruptedException{
+        mail = mail6;
+        testPattern3(mail, password, notif_count, action_signup, action_login, field_mail, field_password, show_password,
+                login, screen_title, x1, y1, x2, y2, logOut, button1LogOut, buttonOK, homePage, loginFailed);
+    }
+    @Test (priority = 7)
+    @Parameters({ "mail7", "password", "x1", "y1", "x2", "y2"})
+    public void login7(String mail7, String password, int x1, int y1, int x2, int y2) throws InterruptedException{
+        mail = mail7;
+        testPattern3(mail, password, notif_count, action_signup, action_login, field_mail, field_password, show_password,
+                login, screen_title, x1, y1, x2, y2, logOut, button1LogOut, buttonOK, homePage, loginFailed);
+    }
+    @Test (priority = 8)
+    @Parameters({ "mail", "password8", "x1", "y1", "x2", "y2"})
+    public void login8(String mail, String password8, int x1, int y1, int x2, int y2) throws InterruptedException{
+        password = password8;
+        testPattern3(mail, password, notif_count, action_signup, action_login, field_mail, field_password, show_password,
+                login, screen_title, x1, y1, x2, y2, logOut, button1LogOut, buttonOK, homePage, loginFailed);
+    }
 }

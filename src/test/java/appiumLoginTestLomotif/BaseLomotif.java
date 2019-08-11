@@ -58,7 +58,7 @@ public class BaseLomotif {
         sendKeysInput(field_password, password);
         tapByElement(show_password);
         tapByElement(login);
-        new TouchAction(driver).waitAction(waitOptions(Duration.ofMillis(10000)));
+        new TouchAction(driver).waitAction(waitOptions(Duration.ofMillis(5000)));
         tapByElement(screen_title);
         assert screen_title.getText().equals("Notifications"):"Actual text is : "
                 + screen_title.getText() + " did not match with expected text: Notifications";
@@ -92,7 +92,7 @@ public class BaseLomotif {
                              AndroidElement action_login, AndroidElement field_mail, AndroidElement field_password,
                              AndroidElement show_password, AndroidElement login, AndroidElement screen_title, int x1,
                              int y1, int x2, int y2, AndroidElement logOut, AndroidElement button1LogOut,
-                             AndroidElement buttonOK, AndroidElement homePage) throws InterruptedException{
+                             AndroidElement buttonOK, AndroidElement homePage, AndroidElement loginFailed) throws InterruptedException{
         System.out.println("Mail: " + mail + " + Password: " + password);
         tapByElement(notif_count);
         tapByElement(action_signup);
@@ -101,17 +101,27 @@ public class BaseLomotif {
         sendKeysInput(field_password, password);
         tapByElement(show_password);
         tapByElement(login);
-        new TouchAction(driver).waitAction(waitOptions(Duration.ofMillis(10000)));
-        tapByElement(screen_title);
-        assert screen_title.getText().equals("Notifications"):"Actual text is : "
-                + screen_title.getText() + " did not match with expected text: Notifications";
-        tapByCoordinates (x1, y1);
-        tapByCoordinates (x2, y2);
-        tapByElement(logOut);
-        tapByElement(button1LogOut);
-        tapByElement(buttonOK);
-        assert homePage.getText().equals("Featured"):"Actual text is : "
-                + homePage.getText() + " did not match with expected text: Featured";
+        new TouchAction(driver).waitAction(waitOptions(Duration.ofMillis(5000)));
+        try {
+            if (loginFailed.isDisplayed()){
+                tapByElement(buttonOK);
+                driver.navigate().back();
+                driver.navigate().back();
+                driver.navigate().back();
+                System.out.println("Login is failed for negative test");
+            }
+        } catch (Exception e){
+            tapByElement(screen_title);
+            assert screen_title.getText().equals("Notifications"):"Actual text is : "
+                    + screen_title.getText() + " did not match with expected text: Notifications";
+            tapByCoordinates (x1, y1);
+            tapByCoordinates (x2, y2);
+            tapByElement(logOut);
+            tapByElement(button1LogOut);
+            tapByElement(buttonOK);
+            assert homePage.getText().equals("Featured"):"Actual text is : "
+                    + homePage.getText() + " did not match with expected text: Featured";
+        }
     }
     public void tapByElement (AndroidElement androidElement) {
         WebDriverWait wait = new WebDriverWait(driver, 10);

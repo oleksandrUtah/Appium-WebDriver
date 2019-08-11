@@ -9,6 +9,11 @@
         <parameter name="x2"  value= "768"/>
         <parameter name="y2"  value="68"/>
         <parameter name="mail3"  value="Koz84075@gmail.com"/>
+        <parameter name="password4"  value="3954korsA"/>
+        <parameter name="password5"  value="3957korsa"/>
+        <parameter name="mail6"  value="xxxxx"/>
+        <parameter name="mail7"  value=""/>
+        <parameter name="password8"  value=""/>
         <classes>
             <class name="appiumLoginTestLomotif.LoginHappyPass"/>
         </classes>
