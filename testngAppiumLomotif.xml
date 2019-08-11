@@ -8,6 +8,7 @@
         <parameter name="y1"  value="1180"/>
         <parameter name="x2"  value= "768"/>
         <parameter name="y2"  value="68"/>
+        <parameter name="mail3"  value="Koz84075@gmail.com"/>
         <classes>
             <class name="appiumLoginTestLomotif.LoginHappyPass"/>
         </classes>

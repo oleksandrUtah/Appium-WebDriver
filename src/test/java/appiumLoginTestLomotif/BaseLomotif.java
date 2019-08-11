@@ -40,7 +40,6 @@ public class BaseLomotif {
     @AfterTest
     public void teardown(){
         driver.quit();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     public void testPattern(String mail, String password, AndroidElement notif_count, AndroidElement allow_button,
@@ -70,17 +69,12 @@ public class BaseLomotif {
         tapByElement(buttonOK);
         assert homePage.getText().equals("Featured"):"Actual text is : "
                 + homePage.getText() + " did not match with expected text: Featured";
-        driver.closeApp();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
     public void testPattern2 (String password, AndroidElement notif_count, AndroidElement allow_button,
                               AndroidElement button1, AndroidElement action_signup, AndroidElement action_login,
                               AndroidElement field_password, AndroidElement show_password) {
         System.out.println("Password must be masked and has show icon");
         tapByElement(notif_count);
-        tapByElement(allow_button);
-        driver.navigate().back();
-        tapByElement(button1);
         tapByElement(action_signup);
         tapByElement(action_login);
         sendKeysInput(field_password, password);
@@ -90,8 +84,34 @@ public class BaseLomotif {
                 + field_password.getText() + " did not masked";
         tapByElement(show_password);
         assert field_password.getText().equals(password):"Show password icon did not working";
-        driver.closeApp();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.navigate().back();
+        driver.navigate().back();
+        driver.navigate().back();
+    }
+    public void testPattern3(String mail, String password, AndroidElement notif_count, AndroidElement action_signup,
+                             AndroidElement action_login, AndroidElement field_mail, AndroidElement field_password,
+                             AndroidElement show_password, AndroidElement login, AndroidElement screen_title, int x1,
+                             int y1, int x2, int y2, AndroidElement logOut, AndroidElement button1LogOut,
+                             AndroidElement buttonOK, AndroidElement homePage) throws InterruptedException{
+        System.out.println("Mail: " + mail + " + Password: " + password);
+        tapByElement(notif_count);
+        tapByElement(action_signup);
+        tapByElement(action_login);
+        sendKeysInput(field_mail, mail);
+        sendKeysInput(field_password, password);
+        tapByElement(show_password);
+        tapByElement(login);
+        new TouchAction(driver).waitAction(waitOptions(Duration.ofMillis(10000)));
+        tapByElement(screen_title);
+        assert screen_title.getText().equals("Notifications"):"Actual text is : "
+                + screen_title.getText() + " did not match with expected text: Notifications";
+        tapByCoordinates (x1, y1);
+        tapByCoordinates (x2, y2);
+        tapByElement(logOut);
+        tapByElement(button1LogOut);
+        tapByElement(buttonOK);
+        assert homePage.getText().equals("Featured"):"Actual text is : "
+                + homePage.getText() + " did not match with expected text: Featured";
     }
     public void tapByElement (AndroidElement androidElement) {
         WebDriverWait wait = new WebDriverWait(driver, 10);
