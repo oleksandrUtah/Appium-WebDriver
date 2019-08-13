@@ -3,8 +3,8 @@
 One of the best tutorials about installation Android Studio and Appium: https://www.swtestacademy.com/appium-tutorial/
 An Appium dependency also contain Selenium WebDriver library.
 In your POM.xml file, there is conflict between appium’s and selenium’s dependencies.
-You need only appium’s and TestNG’s dependencies.
-For example, last io.appium/java-client/7.1.0 already has selenium’s dependencies of version 4.0.0-alpha-1.
+You need only Appium’s and TestNG’s dependencies.
+For example, last io.appium/java-client/7.1.0 already has Selenium’s dependencies of version 4.0.0-alpha-1.
 If you install additionally selenium-java of version 3.141.59 then you will get an error.
 My dependencies in POM.xml file:
 <dependencies>
