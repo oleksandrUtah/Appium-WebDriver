@@ -25,4 +25,4 @@ My dependencies in POM.xml file:
         <version>4.0.1</version>
     </dependency>
 </dependencies>
-Additionally, I install Apache POI ridding Excel files in Java.
+Additionally, I install Apache POI for ridding Excel files in Java.
