@@ -1,0 +1,28 @@
+1.  	Appium Desktop Installation and Configurations
+
+One of the best tutorials about installation Android Studio and Appium: https://www.swtestacademy.com/appium-tutorial/
+An Appium dependency also contain Selenium WebDriver library.
+In your POM.xml file, there is conflict between appium’s and selenium’s dependencies.
+You need only appium’s and TestNG’s dependencies.
+For example, last io.appium/java-client/7.1.0 already has selenium’s dependencies of version 4.0.0-alpha-1.
+If you install additionally selenium-java of version 3.141.59 then you will get an error.
+My dependencies in POM.xml file:
+<dependencies>
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>6.10</version>
+        <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>io.appium</groupId>
+        <artifactId>java-client</artifactId>
+        <version>7.1.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>4.0.1</version>
+    </dependency>
+</dependencies>
+Additionally, I install Apache POI ridding Excel files in Java.
