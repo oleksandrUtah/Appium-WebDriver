@@ -1,0 +1,41 @@
+Programming languages can be classified into 3 types:
+   1. Unstructured (FORTRAN-66). The same blocks of code were repeated as copy-paste.
+   2. Structured (ALGOL-60). The same blocks of code were re-used.
+   3. Object Oriented Programming (Java). The main part of the program are objects that contain data and function.
+
+Core OOPS concepts are:
+   1.	Encapsulation is hiding data inside class.
+        Declare class variables as private for visibility inside class only:
+           private String email;
+
+   2.	Abstraction is hiding the implementation details. Abstraction begin from methods.
+        An abstract method contains a method signature, but no method body.
+        Abstract method ended by semicolon instead of curly braces. Example:
+           public abstract openPage(url);
+        Method can be declared in the Class A and implemented in Class B. Class B can be used by some other classes A.
+        Class must be declared as "abstract" if  this class contains some abstract methods .
+        Class will be named by keyword "interface" if this class contains all abstract methods.
+        Abstract classes and interfaces are named Class A in Page Object Model.
+
+   3.	Inheritance is a process when Class A inherit methods and fields of Class B.
+        The keyword "extends" is used in Class A declaration:
+           class AClass extends BClass {
+           }
+
+   4.	Polymorphism: an object can take many forms.
+        New object can be created:
+           TypeObject   nameObject = new  ConstructorName();
+        TypeObject can be interface like WebDriver or class like AppiumDriver.
+        But interface have not constructor. You can use other classes where interface is implemented:
+           WebDriver driver = new ChromeDriver();
+           or:
+           WebDriver driver = new FirefoxDriver();
+        Overloading is compile time polymorphism: methods in one class have same name but different parameters:
+           myMethod(int a){…}
+           myMethod(String a){…}
+           myMethod(int a, int b){…}
+        Overriding is runtime polymorphism: child Class A and parent Class B have the same method "myMethod()".
+        If an object created in Class A and calling method will be from Class A:
+           obj.myMethod();
+        If an object created in Class A and calling method will be from Class B, used keyword "super":
+           super.myMethod();
