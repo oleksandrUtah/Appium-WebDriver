@@ -35,6 +35,7 @@ Core OOPS concepts are:
            myMethod(String a){…}
            myMethod(int a, int b){…}
         Overriding is runtime polymorphism: child Class A and parent Class B have the same method "myMethod()".
+        The method in class A will be overridden method.
         If an object created in Class A and calling method will be from Class A:
            obj.myMethod();
         If an object created in Class A and calling method will be from Class B, used keyword "super":
