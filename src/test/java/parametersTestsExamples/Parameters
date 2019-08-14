@@ -1,0 +1,24 @@
+What is data driven?
+We can separate Test Data in the external files or resources. This allows us to reuse the script, only modify the data.
+
+https://testng.org/doc/documentation-main.html#parameters
+Example: class LoginParameters.
+
+The @Parameters annotation might be used for simple values with testng.xml file:
+   @Parameters({ "email", "password" })
+
+The XML parameters "email", "password" are defined in testng2.xml file:
+        <parameter name = "email"  value = "koz84075+007@gmail.com"/>
+        <parameter name = "password"  value = "1234567a"/>
+Also we specify what Class will be run:
+   <class name = "parametersTestsExamples.LoginParameters"/>
+
+A regular test case (class LoginParameters):
+   @Test(priority = 1)
+   @Parameters ({ "email", "password" })
+   public void loginTest1(String email, String password) throws InterruptedException{
+       testPattern(Url, loginShocase, email, password, inputLogin, inputPassword, submitLog, profileElement, signOutElement);
+   }
+Parameters in Java method loginTest1() receive the value of the XML parameter.
+
+To run the test, we need to run testng2.xml file.
