@@ -11,29 +11,27 @@ public class LoginDataProvider extends BaseTestParameters{// Example of @DataPro
     private String Url = "https://www.shocase.com/go/signup";
     private String email = "koz84075+007@gmail.com";
     private String password = "1234567a";
+    private String email3 = "Koz84075+007@gmail.com";
     private Actions a;
-    @DataProvider
+    @DataProvider(name = "test4_8")
     public Object[][] LoginCredentials(){
         //Created two dimensional array with 8 rows and 2 columns.
-        Object[][] Cred = new Object[8][2];
+        Object[][] Cred = new Object[5][2];
 
-        Cred[0][0] = "Koz84075+007@gmail.com";
-        Cred[0][1] = "1234567a";
+        Cred[0][0] = "koz84075+007@gmail.com";
+        Cred[0][1] = "1234567A";
 
         Cred[1][0] = "koz84075+007@gmail.com";
-        Cred[1][1] = "1234567A";
+        Cred[1][1] = "123a";
 
-        Cred[2][0] = "koz84075+007@gmail.com";
-        Cred[2][1] = "123a";
+        Cred[2][0] = "xxxxx";
+        Cred[2][1] = "1234567a";
 
-        Cred[3][0] = "xxxxx";
+        Cred[3][0] = "";
         Cred[3][1] = "1234567a";
 
-        Cred[4][0] = "";
-        Cred[4][1] = "1234567a";
-
-        Cred[5][0] = "koz84075+007@gmail.com";
-        Cred[5][1] = "";
+        Cred[4][0] = "koz84075+007@gmail.com";
+        Cred[4][1] = "";
 
         return Cred; //Returned Cred
     }
@@ -66,8 +64,13 @@ public class LoginDataProvider extends BaseTestParameters{// Example of @DataPro
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         Thread.sleep(5000);
     }
-    @Test(dataProvider="LoginCredentials")
-    public void loginTest3_8(String email, String password) throws InterruptedException{
+    @Test
+    public void loginTest3() throws InterruptedException{
+        email = email3;
+        testPattern(Url, loginShocase, email, password, inputLogin, inputPassword, submitLog, profileElement, signOutElement);
+    }
+    @Test(dataProvider="test4_8")
+    public void loginTest4_8(String email, String password) throws InterruptedException{
         testPatternNegative(Url, loginShocase, email, password, inputLogin, inputPassword, submitLog);
     }
 }
