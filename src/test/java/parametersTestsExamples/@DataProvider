@@ -24,11 +24,13 @@ Result:
     Anne 37
     Alex 37
 
-Another example. Use @DataProvider for login test instead of @Parameters.
+Another example.
+Use @DataProvider for login test instead of @Parameters.
 Create class parametersTestsExamples.LoginDataProvider.
 We can to use @DataProvider for negative tests where call the same method "testPatternNegative(...)".
 @DataProvider is useful in case when test script will be the same for each @Test.
 @Parameters will be better than @DataProvider for different test scripts.
+We can run directly LoginDataProvider class or run testng3.xml file.
 
-Data driven testing also using Excel file.
+Data driven testing is also possible using an Excel file.
 Apache POI is used to modify Microsoft Office file.

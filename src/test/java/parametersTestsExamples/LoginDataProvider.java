@@ -1,10 +1,10 @@
 package parametersTestsExamples;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 public class LoginDataProvider extends BaseTestParameters{// Example of @DataProvider method (testng3.xml file)

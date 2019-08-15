@@ -1,0 +1,7 @@
+<suite name="Simple Suite">
+    <test name="dataProvider Test">
+        <classes>
+            <class name = "parametersTestsExamples.LoginDataProvider"/>
+        </classes>
+    </test>
+</suite>
