@@ -25,6 +25,7 @@ Result:
     Alex 37
 
 Another example. Use @DataProvider for login test instead of @Parameters.
+Create class parametersTestsExamples.LoginDataProvider.
 
 
 Data driven testing also using Excel file.
