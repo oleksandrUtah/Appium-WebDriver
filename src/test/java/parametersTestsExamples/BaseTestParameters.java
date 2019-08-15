@@ -13,19 +13,21 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import utility.*;
 
 import java.util.concurrent.TimeUnit;
 
 public class BaseTestParameters {                        // Class B in POM
     public WebDriver driver;
     @BeforeTest
-    public void suiteSetup(){
+    public void suiteSetup()throws Exception{
         /*System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") +
                 "\\src\\test\\resources\\geckodriver.exe");
         driver = new FirefoxDriver();*/
 
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +
                 "\\src\\test\\resources\\chromedriver_76_0_3809_68.exe");
+        ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"LoginShocase");
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

@@ -33,4 +33,21 @@ We can to use @DataProvider for negative tests where call the same method "testP
 We can run directly LoginDataProvider class or run testng3.xml file.
 
 Data driven testing is also possible using an Excel file.
-Apache POI is used to modify Microsoft Office file.
+Apache POI is used to read, create and edit Microsoft Office file.
+Create class parametersTestsExamples.LoginDataProviderExcel.
+Create C:\Users\kozac\Appium-WebDriver\testData\TestData.xlsx file for  tests credentials:
+            email	                password	result
+            koz84075+007@gmail.com	1234567a
+            koz84075+007@gmail.com	1234567a
+            Koz84075+007@gmail.com	1234567a
+            koz84075+007@gmail.com	1234567A
+            koz84075+007@gmail.com	123a
+            xxxxx	                1234567a
+            unknown	                1234567a
+            koz84075+007@gmail.com	unknown
+Use class utility.ExcelUtils and class utility.Constant.
+Add in class BaseTestParameters:
+   ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"LoginShocase");
+Run class parametersTestsExamples.LoginDataProviderExcel.
+
+
