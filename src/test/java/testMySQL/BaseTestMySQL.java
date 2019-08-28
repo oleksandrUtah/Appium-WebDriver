@@ -1,4 +1,5 @@
 package testMySQL;
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
@@ -10,9 +11,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.*;
-import utility.*;
-import  java.sql.Connection;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -40,7 +41,7 @@ public class BaseTestMySQL {                        // Class B in POM
 
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +
                 "\\src\\test\\resources\\chromedriver_76_0_3809_68.exe");
-        ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"LoginShocase");
+
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

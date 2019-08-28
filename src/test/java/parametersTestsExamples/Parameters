@@ -1,4 +1,4 @@
-What is data driven?
+What is data-driven?
 We can separate Test Data in the external files or resources. This allows us to reuse the script, only modify the data.
 
 https://testng.org/doc/documentation-main.html#parameters
