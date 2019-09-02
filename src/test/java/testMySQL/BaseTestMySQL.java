@@ -20,9 +20,16 @@ import java.sql.Statement;
 import java.util.concurrent.TimeUnit;
 public class BaseTestMySQL {                        // Class B in POM
     public WebDriver driver;
-    // Connection object
-    String query = "select email_value,  password_value from login_mysql.test where priority=";
-
+        // Retrieve data from 1 table:
+    //String query = "select email_value,  password_value from login_mysql.test where priority=";
+        // Retrieve data from 3 tables thru INNER JOIN:
+    String query = "SELECT A.`email_value`,  C.`password_value` " +
+                        "FROM `login_mysql`.`email` AS A " +
+                            "INNER JOIN `login_mysql`.`test` AS B " +
+                            "ON A.`email_id` = B.`email_id` " +
+                            "INNER JOIN `login_mysql`.`password` AS C " +
+                            "ON C.`password_id` = B.`password_id` " +
+                        "WHERE B.`priority`=";
     String email_value;
     String password_value;
 
