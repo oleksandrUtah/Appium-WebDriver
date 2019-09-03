@@ -22,14 +22,23 @@ public class BaseTestMySQL {                        // Class B in POM
     public WebDriver driver;
         // Retrieve data from 1 table:
     //String query = "select email_value,  password_value from login_mysql.test where priority=";
-        // Retrieve data from 3 tables thru INNER JOIN:
-    String query = "SELECT A.`email_value`,  C.`password_value` " +
+        // Retrieve data from 3 tables through INNER JOIN:
+    /*String query = "SELECT A.`email_value`,  C.`password_value` " +
                         "FROM `login_mysql`.`email` AS A " +
                             "INNER JOIN `login_mysql`.`test` AS B " +
                             "ON A.`email_id` = B.`email_id` " +
                             "INNER JOIN `login_mysql`.`password` AS C " +
                             "ON C.`password_id` = B.`password_id` " +
-                        "WHERE B.`priority`=";
+                        "WHERE B.`priority`=";*/
+    // We can use "USING" clause
+    // only for identical names for matched columns in both tables (`email_id` and `password_id`)!
+    String query = "SELECT A.`email_value`,  C.`password_value` " +
+            "FROM `login_mysql`.`email` AS A " +
+            "INNER JOIN `login_mysql`.`test` AS B " +
+            "USING (`email_id`) " +
+            "INNER JOIN `login_mysql`.`password` AS C " +
+            "USING (`password_id`) " +
+            "WHERE B.`priority`=";
     String email_value;
     String password_value;
 
