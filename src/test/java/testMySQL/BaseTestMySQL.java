@@ -49,7 +49,7 @@ public class BaseTestMySQL {                        // Class B in POM
                     INNER JOIN `login_mysql`.`password` AS C
                     USING (`password_id`)
                         */
-        // and use VIEW as a regular SELECT statement:
+        // We can use created VIEW as a table in the regular SELECT statement:
     String query = "SELECT email_value,  password_value " +
             "FROM login_mysql.test_credentials " +
             "WHERE priority=";
