@@ -14,8 +14,10 @@ import java.util.concurrent.TimeUnit;
 
 public class AllLinks {
     //String baseUrl = "https://www.remedystaffing.com/";
+    //String baseUrl = "https://cricut.com/en_us/shop/";
     //String baseUrl = "https://www.zionsbancorp.com";
-    String baseUrl = "https://www.zionsbank.com";
+    //String baseUrl = "https://www.zionsbank.com";
+    String baseUrl = "https://www.zionsbank.com/LandingPages/Merchantservices/";
     WebDriver driver;
     @BeforeTest
     public void launchBrowser() {
