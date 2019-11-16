@@ -26,7 +26,7 @@ public class BaseTestParameters {                        // Class B in POM
         driver = new FirefoxDriver();*/
 
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +
-                "\\src\\test\\resources\\chromedriver_76_0_3809_68.exe");
+                "\\src\\test\\resources\\chromedriver.exe");
         ExcelUtils.setExcelFile(Constant.Path_TestData + Constant.File_TestData,"LoginShocase");
         driver = new ChromeDriver();
 
