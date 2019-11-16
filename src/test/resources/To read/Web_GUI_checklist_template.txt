@@ -1,0 +1,132 @@
+	What is GUI?
+There are two types of interfaces for a computer application: 
+Command Line Interface (CLI) and Graphical User Interface (GUI). 
+
+In GUI you interact with the computer using images (in CLI - text).
+GUI Testing is a validation of the GUI elements (menu; buttons; radio buttons; checkboxes …).
+
+To plan your GUI testing, you need a checklist and test order.
+
+		Web GUI Checklist template:
+		
+	Run Web Site
+Clickable Logo must be on each page. 
+Unique different Title must be of each page.
+
+	For each page
+Horizontal scrolling must be avoided.
+Invalid hyperlinks must be fixed.
+The link text must be consistent with the title or headings on the destination.
+Suggest "Pointing-and-clicking," rather than "mouse over" when selecting menu items.
+Check the positioning of GUI elements for different screen resolution.
+The images must be properly aligned.
+Check all text on page for spelling/tense and grammar. 
+Use TAB to move focus around the page. Use SHIFT+TAB to move focus backwards. 
+Tab order should be left to right, and up to down within a section on the page. 
+All controls should get focus. 
+Tabbing to an entry field with text in it should highlight the entire text in the field. 
+If a field is disabled (grey) then it should not get focus.
+
+	Text fields
+All mandatory fields must require user input (labeled by asterisks or “required”).
+Move the mouse cursor over all enterable text fields. 
+The cursor should change from arrow to insert bar for editable text field. 
+Enter text into the field. Enter invalid characters. 
+SHIFT and arrow should select characters. 
+Selection should also be possible with mouse. 
+Double click should select whole word in the field.
+
+	Date Field 
+Leap years must be validated correctly.
+Month code 00 and 13 must be validated correctly. Assure that 00 and 13 are reported as errors.
+Day values 00 and 32 must be validated correctly. Assure that 00 and 32 are reported as errors.
+Feb. 28, 29, 30 must be validated correctly. Assure that Feb. 30 is reported as an error.
+Century change must be validated correctly.
+
+	Numeric Fields
+Assure that lowest and highest values are handled correctly.
+Assure that invalid values are logged and reported.
+Assure that valid values are handles by the correct procedure.
+Assure that numeric fields with a blank in position 1 are processed or reported as an error.
+Assure that fields with a blank in the last position are processed or reported as an error an error.
+Assure that both + and - values are correctly processed.
+Assure that division by zero does not occur.
+Include value zero in all calculations.
+Include at least one in-range value.
+Include maximum and minimum range values.
+Include out of range values above the maximum and below the minimum.
+Assure that upper and lower values in ranges are handled correctly.
+
+	Alphabetic Fields
+Include valid characters.
+Use blank and non-blank data.
+Include lowercase and uppercase characters.
+Include invalid characters and symbols.
+Include data items with first position blank.
+Include data items with last position blank.
+
+	Radio Buttons
+Select with the mouse by clicking. Press any keyboard arrows should move 'ON' selection. 
+
+	Check Boxes
+Clicking with the mouse on the box, or select by Tab + Enter should SET/UNSET the box. 
+
+	Command Buttons
+A command button must be grayed out when it should not be used.
+If the command button leads to another page, 
+and if the user can enter or change details on the other pages, 
+then the text on the button should be followed by three dots.
+All buttons except for OK and Cancel should have a letter access to them. 
+This is indicated by a letter underlined in the button text.
+Click each button once with the mouse - This should activate.
+Tab to each button - Press SPACE / Enter (RETURN) - This should activate.
+
+	Drop Down List Box
+Users can choose one and only one option. 
+Pressing the arrow Down/Up should give and navigate list of options. 
+This list may be scrollable. 
+You should not be able to type text in the box. 
+Drop down with the item selected should be display the list with the selected item on the top. 
+You shouldn't have a blank line at the bottom.
+The list items must be sorted in alphabetical order except for the option that represents all items.
+
+	Combo Box
+A combo box allows the user either to select an item from the list or type in a new item. 
+Clicking the arrow should allow user to choose from list.
+
+	List Box
+Allow the selection of one item by clicking the mouse or using the up and down arrow keys.
+Pressing a letter should take you to the first item in the list starting with that letter.
+Force the scroll bar to appear, make sure all the data can be seen in the box.
+
+	Error Messages
+Error Messages must display correctly. 
+The color of the font and warning messages must be aesthetically pleasing.
+
+
+Bag examples: 
+
+"Disabled access the homepage".
+"Page has not Logo or 'Home' link ".
+"All site pages have the same Titles".
+"Page layout has horizontal scroll bar".
+"Link doesn’t lead to valid resources and get 404 error code ('Page Not Found' message)".
+"Link text is different from destination header". 
+"Page title is not consistent with link that it invoked".
+"Unreachable code" or "stale element" when test automated.
+"Misspelled word 'Slate' instead of expected 'State' in the banner".
+"Incorrect TAB order right to left instead of expected left to right."
+"Enabled controls when cannot use them".
+"The cursor does not automatically set in the first data entry field when page opened".
+"Table items are not aligned right for ease of comparison".
+"Menu item has an ellipsis but the command does not require additional information ".
+"There is no 'Other' item in the list box for completeness".
+"Text and background have the same or non-contrast color".
+"Icon has not the label or prompts".
+"User can create account using non-existing email".
+"Text box is covered by the virtual keyboard when the tablet is in a horizontal state".
+"App crushed after the 'Arrow back' tap".
+"Search results are not sorted".
+"Incorrect format (date | US address) was used".
+"All labels must end with a ':' (colon) character".
+
