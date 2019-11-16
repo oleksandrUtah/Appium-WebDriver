@@ -130,3 +130,6 @@ Bag examples:
 "Incorrect format (date | US address) was used".
 "All labels must end with a ':' (colon) character".
 
+See also:
+https://www.guru99.com/gui-testing.html
+http://www.methodsandtools.com/archive/archive.php?id=37
