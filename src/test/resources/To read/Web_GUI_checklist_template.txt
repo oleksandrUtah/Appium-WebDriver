@@ -8,8 +8,12 @@ GUI Testing is a validation of the GUI elements (menu; buttons; radio buttons; c
 To plan your GUI testing, you need a checklist and test order.
 
 		Web GUI Checklist template:
-		
-	Run Web Site
+
+    Before Run Web Site
+Read the Business Requirements Document (BRD); "use case" (if available).
+The web application is checked to verify conformity with the user's requirements.
+
+    Run Web Site
 Clickable Logo must be on each page. 
 Unique different Title must be of each page.
 
@@ -29,7 +33,7 @@ If a field is disabled (grey) then it should not get focus.
 
 	Text fields
 All mandatory fields must require user input (labeled by asterisks or “required”).
-Move the mouse cursor over all enterable text fields. 
+Move the mouse cursor over all input text fields.
 The cursor should change from arrow to insert bar for editable text field. 
 Enter text into the field. Enter invalid characters. 
 SHIFT and arrow should select characters. 
