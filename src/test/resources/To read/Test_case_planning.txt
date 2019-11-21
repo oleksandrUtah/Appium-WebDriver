@@ -1,0 +1,28 @@
+		TEST CASE PLANNING
+The four goals of test case planning: 
+- organization, 
+- repeatability, 
+- tracking, 
+- proof.
+
+TestRail is one of the popular a web-based test case management tool:
+http://docs.gurock.com/testrail-userguide/start
+
+TestRail can be integrated with many other tools – JIRA, Bugzilla, GitHub…
+To manage tests, TestRail allows to add Test Plan with Milestones and to track Progress & Activity.
+In TestRail, test cases are organized into test suite, named Section.
+
+Each Section has Happy Path, positive and negative test cases.
+Each TC has main columns: ID; Title; Preconditions; Steps; Expected result. 
+User enters Title; Preconditions; Steps; and Expected Result.
+Other fields are selected by default.
+
+Common login/password test suite consists of next TC with titles, depend of requirements:
+- Happy Path: Verify registered "Email" + Created "Password" used for logging.
+- Positive: Verify masking Password type (displays in bullets).
+- Positive: Make sure, that "Email" not Case Sensitivity.
+- Positive: Make sure, that "Password" not Case Sensitivity.
+- Negative: Verify that registered "Email" + unregistered "Password" cannot be used to log in.
+- Negative: Verify that unregistered "Email" + registered "Password" cannot be used to log in.
+- Negative: Make sure, that "Email" field is required.
+- Negative: Make sure, that "Password" field is required.
