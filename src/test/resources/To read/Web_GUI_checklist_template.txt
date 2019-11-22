@@ -153,8 +153,7 @@ Functionality/Validation
 Error Messages must display correctly. 
 The color of the font and warning messages must be aesthetically pleasing.
 
-
-Bag examples: 
+    Bag examples:
 
 "Disabled access the homepage".
 "Page has not Logo or 'Home' link ".
@@ -180,7 +179,7 @@ Bag examples:
 "Incorrect format (date | US address) was used".
 "All labels must end with a ':' (colon) character".
 
-See also:
+    See also:
 https://www.lasth.com/onlinehome/
 https://guidelines.usability.gov/
 https://www.lasth.com/wp-content/uploads/2016/09/WindowsUserExperience-Windows-XP_2000.pdf
