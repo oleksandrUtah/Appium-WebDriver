@@ -1,0 +1,74 @@
+		TEST CASE CREATING
+What do we need before creating a test case?
+Test case is a testing document which contains all procedures and parameters to compare requirement and app behavior.
+First of all, requirements are needed. Each project might have different levels Requirement Documents:
+    1 level - Business Requirement Document (BRD)
+    2 level - Product Requirement Document (PRD)
+    3 level - Functional Specification (FS)
+
+BRD - the first step document of any product lifecycle
+	- business-user level (“what” the software must do)
+	- Business Analist requirements
+	- Example: "Save As" - "User should have oportunity to save the document in major text format"
+
+PRD - the second step document (not enough to test cases creating)
+	- describe the features ("what" is included in the product)
+	- Example: "Save As in format" - "User should have oportunity to save the document in available formats: .docx; .pdf; .htm; .txt; ..."
+
+Functional Specification (FS)
+	- the third step document (most useful for testers to test cases creating)
+	- outline “how” the software will be created (from the technical team perspective)
+	- Example: detailed talk about each available format "Save As in format .docx" -
+		* DOCX, Microsoft Word Open XML Document
+		* is an advanced version of the DOC file format
+		* is much more usable and accessible than the DOC file format
+		* is not an extensive file format
+		* it appears as a single file but maintaining an archive of package file less than 10kb
+		* this new version more convenient to archive
+		* it's easy to send DOCX document files as attachments with emails
+		* Programs that use this format:
+			Microsoft Word 2013;
+			Corel WordPerfect X7;
+			Apple Pages 5.2;
+			MobiSystems OfficeSuite Pro 7;
+			Google Drive."
+The result of BRD or PRD customer requirements is just raw data for business or features.
+The specifications take all this information plus any standart's mandatory requirements.
+Each test case can be created from one detailed FS requirement.
+
+The four goals of test case planning:
+- organization, 
+- repeatability, 
+- tracking, 
+- proof.
+
+Test case can be one of three types: "Happy Path"; "Positive" or "Negative".
+- "Happy Path" is test case with required parameters.
+- Positive testing is test case with parameters which are different from required parameters
+	but expected result must be the same.
+- Negative testing is test case with parameters which are different from required parameters
+	and expected result must be not the same.
+* Start with "Happy Path" and positive testing first.
+No negative test cases until we make sure that positive use case (instance of a completed form) passes.
+
+TestRail is one of the popular a web-based test case management tool:
+http://docs.gurock.com/testrail-userguide/start
+
+TestRail can be integrated with many other tools – JIRA, Bugzilla, GitHub…
+To manage tests, TestRail allows to add Test Plan with Milestones and to track Progress & Activity.
+In TestRail, test cases are organized into test suite, named Section.
+
+Each Section has Happy Path, positive and negative test cases.
+Each TC has main columns: ID; Title; Preconditions; Steps; Expected result. 
+User enters Title; Preconditions; Steps; and Expected Result.
+Other fields are selected by default.
+
+Common login/password test suite consists of next TC with titles, depend of requirements:
+- Happy Path: Verify registered "Email" + Created "Password" used for logging.
+- Positive: Verify masking Password type (displays in bullets).
+- Positive: Make sure, that "Email" not Case Sensitivity.
+- Positive: Make sure, that "Password" not Case Sensitivity.
+- Negative: Verify that registered "Email" + unregistered "Password" cannot be used to log in.
+- Negative: Verify that unregistered "Email" + registered "Password" cannot be used to log in.
+- Negative: Make sure, that "Email" field is required.
+- Negative: Make sure, that "Password" field is required.

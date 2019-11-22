@@ -5,13 +5,20 @@ Command Line Interface (CLI) and Graphical User Interface (GUI).
 In GUI you interact with the computer using images (in CLI - text).
 GUI Testing is a validation of the GUI elements (menu; buttons; radio buttons; checkboxes …).
 
+GUI is a part of functional testing.
+Functional testing is verifying "application's behavioral meets to specification".
 To plan your GUI testing, you need a checklist and test order.
 
 		Web GUI Checklist template:
 
     Before Run Web Site
-Read the Business Requirements Document (BRD); "use case" (if available).
-The web application is checked to verify conformity with the user's requirements.
+Read either the "use case"; Business Requirements Document (BRD);  Product Requirement Document (PRD); or
+Functional Specification (FS) - what is available.
+The web application is verified for conformity with user requirements. Gui can be detailed by user requirements:
+    - Title names;
+    - which fields are required;
+    - types of entry fields;
+    - Error Messages texts ...
 
     Run Web Site
 Clickable Logo must be on each page. 
@@ -31,14 +38,32 @@ All controls should get focus.
 Tabbing to an entry field with text in it should highlight the entire text in the field. 
 If a field is disabled (grey) then it should not get focus.
 
+    Required Fields
+Each required field labeled by asterisks or “required”
+Error message provided if required field has no input
+
+    Edit Boxes
+- Capacity Testing (5 test cases: min; max; middle; min - 1; max + 1)
+- Valid/Invalid Input (3+ test cases: empty; valid; invalid)
+- ZIP CODE (digits only, 5-digits only)
+- Phone Number: No letters, No special Characters (possible exceptions: dash,  round brackets, dot, space).
+	10 digits (11 if begins with one). Might have 3 edit boxes per number.
+- EMail (accepts letters, digits, some special characters - @ . - _ )
+- are wild cards accepted ([* - any string];[? - any character] ...)?
+- DATE field needs validation for month (01-12), day (01-31), year (1900 - current)
+- TIME needs validation for minutes (00-59), hours (00-23), seconds (00-59)
+
 	Text fields
-All mandatory fields must require user input (labeled by asterisks or “required”).
 Move the mouse cursor over all input text fields.
 The cursor should change from arrow to insert bar for editable text field. 
 Enter text into the field. Enter invalid characters. 
 SHIFT and arrow should select characters. 
 Selection should also be possible with mouse. 
 Double click should select whole word in the field.
+
+    Emails retaining data (if applicable)
+Correct address
+Correct data for each field
 
 	Date Field 
 Leap years must be validated correctly.
@@ -69,6 +94,10 @@ Include invalid characters and symbols.
 Include data items with first position blank.
 Include data items with last position blank.
 
+    Controls
+Identical controls in different forms are consistent (look, name, behavior)
+Checkboxes/radio buttons - have reasonable initial values
+
 	Radio Buttons
 Select with the mouse by clicking. Press any keyboard arrows should move 'ON' selection. 
 
@@ -84,6 +113,11 @@ All buttons except for OK and Cancel should have a letter access to them.
 This is indicated by a letter underlined in the button text.
 Click each button once with the mouse - This should activate.
 Tab to each button - Press SPACE / Enter (RETURN) - This should activate.
+
+    Default Button Assignment
+Make sure there is one
+Make sure the choice of default button is not conflicting with anything
+The choice should be consistent from form to form in the application
 
 	Drop Down List Box
 Users can choose one and only one option. 
@@ -102,6 +136,18 @@ Clicking the arrow should allow user to choose from list.
 Allow the selection of one item by clicking the mouse or using the up and down arrow keys.
 Pressing a letter should take you to the first item in the list starting with that letter.
 Force the scroll bar to appear, make sure all the data can be seen in the box.
+
+    Values in lists
+One value represents the entire list - try just one
+To be consistent
+To be complete (compare with similar services).
+Make sure  "Other"/"None"/"Less than"/"Over" item is present when applicable
+Negative test case - assign nothing - get the error message
+
+    Data Input Rules
+Use Lists whenever possible versus text boxes
+Calculate rather than ask for input (for example: calculate county by ZIP)
+Functionality/Validation
 
 	Error Messages
 Error Messages must display correctly. 
