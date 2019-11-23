@@ -13,7 +13,7 @@ BRD - the first step document of any product lifecycle
 
 PRD - the second step document (not enough to test cases creating)
 	- describe the features ("what" is included in the product)
-	- Example: "Save As in format" - "User should have oportunity to save the document in available formats: .docx; .pdf; .htm; .txt; ..."
+	- Example: "Save As in format" - "User should have opportunity to save the document in available formats: .docx; .pdf; .htm; .txt; ..."
 
 Functional Specification (FS)
 	- the third step document (most useful for testers to test cases creating)
