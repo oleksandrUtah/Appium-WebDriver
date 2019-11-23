@@ -15,7 +15,7 @@ PRD - the second step document; result of Planning stage (not enough to test cas
 	- Example: "Save As in format" - "User should have opportunity to save the document in available formats: .docx; .pdf; .htm; .txt; ..."
 
 Functional Specification (FS)
-	- the third step document; result of Design stage (most useful for testers to test cases creating)
+	- the third step document; result of Planning/Design/Coding stage (most useful for testers to test cases creating)
 	- outline “how” the software will be created (from the technical team perspective)
 	- Example: detailed talk about each available format "Save As in format .docx" -
 		* DOCX, Microsoft Word Open XML Document
@@ -33,6 +33,7 @@ Functional Specification (FS)
 			Google Drive."
 The result of BRD or PRD customer requirements is just raw data for business or features.
 The specifications take all this information plus any standards mandatory requirements.
+There is no any standard for documentation BRD; PRD; and FS. Each company has its own form of documents.
 Each test case can be created from one detailed FS requirement.
 
 The four goals of test case planning:
