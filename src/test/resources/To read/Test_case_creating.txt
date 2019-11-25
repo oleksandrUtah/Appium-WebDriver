@@ -50,6 +50,7 @@ Test case can be one of three types: "Happy Path"; "Positive" or "Negative".
 	and expected result must be not the same.
 * Start with "Happy Path" and positive testing first.
 No negative test cases until we make sure that positive use case (instance of a completed form) passes.
+Positive TC have high priority. Negative TC have lower priority.
 
 TestRail is one of the popular a web-based test case management tool:
 http://docs.gurock.com/testrail-userguide/start
@@ -72,3 +73,8 @@ Common login/password test suite consists of next TC with titles, depend of requ
 - Negative: Verify that unregistered "Email" + registered "Password" cannot be used to log in.
 - Negative: Make sure, that "Email" field is required.
 - Negative: Make sure, that "Password" field is required.
+
+Execution Rate = #TC exe : # TC all (0% - 95%/100%)
+Pass Rate = #TC pass : # TC exe (90%/95% - 100%)
+Pass Rate shows what is the quality of software feature.
+Time the testing stop: critical bugs are absent, P.R.= 97%, it must be pointed in the test plan.
