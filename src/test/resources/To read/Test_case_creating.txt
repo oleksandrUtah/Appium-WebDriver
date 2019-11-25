@@ -78,6 +78,8 @@ Common login/password test suite consists of next TC with titles, depend of requ
 Create one test case for each equivalence class (Happy Path).
 Also use boundary testing on the edges of equivalence partition.
 Valid values are used for positive test cases. Invalid values are used for negative test cases.
+For example, to test text field under requirement "Username must contains >=1 and <=20 characters",
+we should create 5 test cases: input 0; 1; 5; 20; and 21 characters.
 
 Execution Rate = #TC exe : # TC all (0% - 95%/100%)
 Pass Rate = #TC pass : # TC exe (90%/95% - 100%)
