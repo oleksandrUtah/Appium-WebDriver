@@ -75,6 +75,10 @@ Common login/password test suite consists of next TC with titles, depend of requ
 - Negative: Make sure, that "Email" field is required.
 - Negative: Make sure, that "Password" field is required.
 
+Create one test case for each equivalence class (Happy Path).
+Also use boundary testing on the edges of equivalence partition.
+Valid values are used for positive test cases. Invalid values are used for negative test cases.
+
 Execution Rate = #TC exe : # TC all (0% - 95%/100%)
 Pass Rate = #TC pass : # TC exe (90%/95% - 100%)
 Pass Rate shows what is the quality of software feature.
