@@ -64,7 +64,8 @@ Each TC has main columns: ID; Title; Preconditions; Steps; Expected result.
 User enters Title; Preconditions; Steps; and Expected Result.
 Other fields are selected by default.
 
-Common login/password test suite consists of next TC with titles, depend of requirements:
+Common login/password test suite consists of next TC with titles, depend of requirements.
+"App name" Login/Password Testcases:
 - Happy Path: Verify registered "Email" + Created "Password" used for logging.
 - Positive: Verify masking Password type (displays in bullets).
 - Positive: Make sure, that "Email" not Case Sensitivity.
