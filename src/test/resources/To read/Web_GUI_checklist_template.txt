@@ -1,20 +1,22 @@
 	What is GUI?
-There are two types of interfaces for a computer application: 
+Testing classified as functional; non-functional; and UI.
+There are two types of User Interfaces (UI) for a computer application:
 Command Line Interface (CLI) and Graphical User Interface (GUI). 
 
 In GUI you interact with the computer using images (in CLI - text).
 GUI Testing is a validation of the GUI elements (menu; buttons; radio buttons; checkboxes …).
 
-GUI is a part of functional testing.
 Functional testing is verifying "application's behavioral meets to specification".
 To plan your GUI testing, you need a checklist and test order.
+The result of functional testing should also be considered.
 
 		Web GUI Checklist template:
 
     Before Run Web Site
 Read either the "use case"; Business Requirements Document (BRD);  Product Requirement Document (PRD); or
 Functional Specification (FS) - what is available.
-The web application is verified for conformity with user requirements. Gui can be detailed by user requirements:
+The web application is verified for conformity with user requirements (functional testing).
+Gui can be detailed by user requirements:
     - Title names;
     - which fields are required;
     - types of entry fields;
@@ -159,7 +161,7 @@ The color of the font and warning messages must be aesthetically pleasing.
 "Page has not Logo or 'Home' link ".
 "All site pages have the same Titles".
 "Page layout has horizontal scroll bar".
-"Link doesn’t lead to valid resources and get 404 error code ('Page Not Found' message)".
+"Link does not lead to valid resources and get 404 error code ('Page Not Found' message)".
 "Link text is different from destination header". 
 "Page title is not consistent with link that it invoked".
 "Unreachable code" or "stale element" when test automated.
