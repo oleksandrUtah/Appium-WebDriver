@@ -6,16 +6,14 @@ Command Line Interface (CLI) and Graphical User Interface (GUI).
 In GUI, you interact with the computer using images (in CLI - text).
 
 Functional testing is verifying "application's behavioral meets to specification".
-GUI Testing is a validation of the GUI elements.
-We do not test GUI controls, unless they are custom (Radio Buttons; Check Boxes; Command Buttons; and list boxes).
-Controls come ready to use from vendors.
 Read either the "use case"; Business Requirements Document (BRD);  Product Requirement Document (PRD); or
 Functional Specification (FS) - what is available.
 The web application is verified for conformity with user requirements (functional testing).
-
+We do not test GUI controls, unless they are custom (Radio Buttons; Check Boxes; Command Buttons; and list boxes).
+Controls come ready to use from vendors.
+Therefore, we'll testing GUI functionality for Web apps.
 To plan your GUI testing, you need a checklist and test order.
-The result of functional testing should also be considered.
-
+=============================================================================================
 		Web GUI Checklist template:
 
     Before Run Web Site
@@ -87,7 +85,7 @@ Functionality/Validation
 	Error Messages
 Error Messages must display correctly. 
 The color of the font and warning messages must be aesthetically pleasing.
-
+=============================================================================================
     Bag examples:
 
 "Disabled access the homepage".
@@ -113,7 +111,7 @@ The color of the font and warning messages must be aesthetically pleasing.
 "Search results are not sorted".
 "Incorrect format (date | US address) was used".
 "All labels must end with a ':' (colon) character".
-
+=============================================================================================
     See also:
 https://www.lasth.com/onlinehome/
 https://guidelines.usability.gov/
