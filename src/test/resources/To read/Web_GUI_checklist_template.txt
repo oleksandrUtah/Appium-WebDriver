@@ -32,9 +32,9 @@ Horizontal scrolling must be avoided.
 Invalid hyperlinks should be fixed.
 The link text must be consistent with the title or headings on the destination.
 Suggest "Pointing-and-clicking," rather than "mouse over" when selecting menu items.
-Check the positioning of GUI elements for different screen resolution.
+Validate the positioning of GUI elements for different screen resolution.
 The images must be properly aligned.
-Check all text on page for spelling/tense and grammar. 
+Validate all text on page for spelling/tense and grammar.
 Use TAB to move focus around the page. Use SHIFT+TAB to move focus backwards. 
 Tab order should be left to right, and up to down within a section on the page. 
 All controls should get focus. 
