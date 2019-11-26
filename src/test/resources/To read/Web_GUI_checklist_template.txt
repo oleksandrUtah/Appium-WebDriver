@@ -1,22 +1,25 @@
 	What is GUI?
-Testing classified as functional; non-functional; and UI.
-There are two types of User Interfaces (UI) for a computer application:
-Command Line Interface (CLI) and Graphical User Interface (GUI). 
-
-In GUI you interact with the computer using images (in CLI - text).
-GUI Testing is a validation of the GUI elements (menu; buttons; radio buttons; checkboxes …).
+Testing is the process of searching for software errors.
+Testing classified as functional; non-functional; and User Interfaces (UI).
+There are two types of UI for a computer application:
+Command Line Interface (CLI) and Graphical User Interface (GUI).
+In GUI, you interact with the computer using images (in CLI - text).
 
 Functional testing is verifying "application's behavioral meets to specification".
+GUI Testing is a validation of the GUI elements.
+We do not test GUI controls, unless they are custom (Radio Buttons; Check Boxes; Command Buttons; and list boxes).
+Controls come ready to use from vendors.
+Read either the "use case"; Business Requirements Document (BRD);  Product Requirement Document (PRD); or
+Functional Specification (FS) - what is available.
+The web application is verified for conformity with user requirements (functional testing).
+
 To plan your GUI testing, you need a checklist and test order.
 The result of functional testing should also be considered.
 
 		Web GUI Checklist template:
 
     Before Run Web Site
-Read either the "use case"; Business Requirements Document (BRD);  Product Requirement Document (PRD); or
-Functional Specification (FS) - what is available.
-The web application is verified for conformity with user requirements (functional testing).
-Gui can be detailed by user requirements:
+GUI can be detailed by user requirements:
     - Title names;
     - which fields are required;
     - types of entry fields;
@@ -28,7 +31,7 @@ Unique different Title must be of each page.
 
 	For each page
 Horizontal scrolling must be avoided.
-Invalid hyperlinks must be fixed.
+Invalid hyperlinks should be fixed.
 The link text must be consistent with the title or headings on the destination.
 Suggest "Pointing-and-clicking," rather than "mouse over" when selecting menu items.
 Check the positioning of GUI elements for different screen resolution.
@@ -54,90 +57,11 @@ Error message provided if required field has no input
 - are wild cards accepted ([* - any string];[? - any character] ...)?
 - DATE field needs validation for month (01-12), day (01-31), year (1900 - current)
 - TIME needs validation for minutes (00-59), hours (00-23), seconds (00-59)
-
-	Text fields
-Move the mouse cursor over all input text fields.
-The cursor should change from arrow to insert bar for editable text field. 
-Enter text into the field. Enter invalid characters. 
-SHIFT and arrow should select characters. 
-Selection should also be possible with mouse. 
-Double click should select whole word in the field.
+- Data Retained in Database - test for each field
 
     Emails retaining data (if applicable)
 Correct address
 Correct data for each field
-
-	Date Field 
-Leap years must be validated correctly.
-Month code 00 and 13 must be validated correctly. Assure that 00 and 13 are reported as errors.
-Day values 00 and 32 must be validated correctly. Assure that 00 and 32 are reported as errors.
-Feb. 28, 29, 30 must be validated correctly. Assure that Feb. 30 is reported as an error.
-Century change must be validated correctly.
-
-	Numeric Fields
-Assure that lowest and highest values are handled correctly.
-Assure that invalid values are logged and reported.
-Assure that valid values are handles by the correct procedure.
-Assure that numeric fields with a blank in position 1 are processed or reported as an error.
-Assure that fields with a blank in the last position are processed or reported as an error an error.
-Assure that both + and - values are correctly processed.
-Assure that division by zero does not occur.
-Include value zero in all calculations.
-Include at least one in-range value.
-Include maximum and minimum range values.
-Include out of range values above the maximum and below the minimum.
-Assure that upper and lower values in ranges are handled correctly.
-
-	Alphabetic Fields
-Include valid characters.
-Use blank and non-blank data.
-Include lowercase and uppercase characters.
-Include invalid characters and symbols.
-Include data items with first position blank.
-Include data items with last position blank.
-
-    Controls
-Identical controls in different forms are consistent (look, name, behavior)
-Checkboxes/radio buttons - have reasonable initial values
-
-	Radio Buttons
-Select with the mouse by clicking. Press any keyboard arrows should move 'ON' selection. 
-
-	Check Boxes
-Clicking with the mouse on the box, or select by Tab + Enter should SET/UNSET the box. 
-
-	Command Buttons
-A command button must be grayed out when it should not be used.
-If the command button leads to another page, 
-and if the user can enter or change details on the other pages, 
-then the text on the button should be followed by three dots.
-All buttons except for OK and Cancel should have a letter access to them. 
-This is indicated by a letter underlined in the button text.
-Click each button once with the mouse - This should activate.
-Tab to each button - Press SPACE / Enter (RETURN) - This should activate.
-
-    Default Button Assignment
-Make sure there is one
-Make sure the choice of default button is not conflicting with anything
-The choice should be consistent from form to form in the application
-
-	Drop Down List Box
-Users can choose one and only one option. 
-Pressing the arrow Down/Up should give and navigate list of options. 
-This list may be scrollable. 
-You should not be able to type text in the box. 
-Drop down with the item selected should be display the list with the selected item on the top. 
-You shouldn't have a blank line at the bottom.
-The list items must be sorted in alphabetical order except for the option that represents all items.
-
-	Combo Box
-A combo box allows the user either to select an item from the list or type in a new item. 
-Clicking the arrow should allow user to choose from list.
-
-	List Box
-Allow the selection of one item by clicking the mouse or using the up and down arrow keys.
-Pressing a letter should take you to the first item in the list starting with that letter.
-Force the scroll bar to appear, make sure all the data can be seen in the box.
 
     Values in lists
 One value represents the entire list - try just one
@@ -145,6 +69,15 @@ To be consistent
 To be complete (compare with similar services).
 Make sure  "Other"/"None"/"Less than"/"Over" item is present when applicable
 Negative test case - assign nothing - get the error message
+
+    Default Button Assignment
+- make sure there is one
+- make sure the choice of default button is not conflicting with anything
+- the choice should be consistent from form to form in the application
+
+    Controls
+- identical controls in different forms are consistent (look, name, behavior)
+- Checkboxes/radiobuttons - have reasonable initial values
 
     Data Input Rules
 Use Lists whenever possible versus text boxes
