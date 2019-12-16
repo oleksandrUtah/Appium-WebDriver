@@ -13,9 +13,10 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class AllLinks {
+    String baseUrl = "https://test.sugaringfactory.com/";
     //String baseUrl = "https://www.shocase.com/go/signup";
     //String baseUrl = "https://www.remedystaffing.com/";
-    String baseUrl = "https://cricut.com/en_us/shop/";
+    //String baseUrl = "https://cricut.com/en_us/shop/";
     //String baseUrl = "https://www.zionsbancorp.com";
     //String baseUrl = "https://www.zionsbank.com";
     //String baseUrl = "https://www.zionsbank.com/LandingPages/Merchantservices/";
@@ -26,7 +27,7 @@ public class AllLinks {
                 "\\src\\test\\resources\\geckodriver.exe");
         driver = new FirefoxDriver();*/
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") +
-                "\\src\\test\\resources\\chromedriver_76_0_3809_68.exe");
+                "\\src\\test\\resources\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.manage().window().maximize();
